@@ -1,3 +1,5 @@
+import data from '../data/article';
+import { BlogCard } from './BlogCard/BlogCard';
 export const App = () => {
   return (
     <div
@@ -10,7 +12,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <BlogCard data={data} />
     </div>
   );
 };
