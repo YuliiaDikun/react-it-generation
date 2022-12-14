@@ -1,6 +1,7 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyleComponent = createGlobalStyle`
+  
   img {
     display: block;
     max-width: 100%;
@@ -36,4 +37,4 @@ export const GlobalStyleComponent = createGlobalStyle`
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-`
+`;
