@@ -3,32 +3,40 @@ import stats from '../data/data';
 import forbes from '../data/forbes';
 import transactions from '../data/transactions';
 import { Statistics } from './Statistics/Statistics';
+import { Section } from './Section/Section.styled';
+import { Heading } from './Heading/Heading.styled';
+import { Container } from './Container/Container.styled';
 import { BlogCard } from './BlogCard/BlogCard';
 import { ForbesList } from './ForbesList/ForbesList';
 import { CryptoHistory } from './CryptoHistory/CryptoHistory';
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components';
 import { GlobalStyleComponent } from 'styles/GlobalStyles';
-import {theme} from 'styles/theme'
+import { theme } from 'styles/theme';
 
 export const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div
-      // style={{
-      //   height: '100vh',
-      //   display: 'flex',
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-      //   fontSize: 40,
-      //   color: '#010101',
-      // }}
-      >
-        <BlogCard data={data} />
-        <Statistics title="main statistics" stats={stats} />
-        <ForbesList list={forbes} />
-        <CryptoHistory transactionHistory={transactions} />
-        <GlobalStyleComponent />
-      </div>
+      <Section>
+        <Container>
+          <Heading marginBottom="50px" textAlign="center">
+            Task 1
+          </Heading>
+          <BlogCard data={data} />
+          <Heading marginBottom="50px" textAlign="center" marginTop="50px">
+            Task 2
+          </Heading>
+          <Statistics title="main statistics" stats={stats} />
+          <Heading marginBottom="50px" textAlign="center" marginTop="50px">
+            Task 3
+          </Heading>
+          <ForbesList list={forbes} />
+          <Heading marginBottom="50px" textAlign="center" marginTop="50px">
+            Task 4
+          </Heading>
+          <CryptoHistory transactionHistory={transactions} />
+          <GlobalStyleComponent />
+        </Container>
+      </Section>
     </ThemeProvider>
   );
 };
