@@ -1,6 +1,13 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyleComponent = createGlobalStyle`
+  @font-face {
+font-family: "Montserrat";
+src: local("Montserrat"),
+ url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+font-weight: bold;
+}
+
   img {
     display: block;
     max-width: 100%;
@@ -36,4 +43,4 @@ export const GlobalStyleComponent = createGlobalStyle`
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-`
+`;

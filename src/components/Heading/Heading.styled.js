@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Heading = styled.h2`
+  font-family: 'Montserrat';
   font-size: ${({ theme }) => theme.fontSizes.large};
   font-weight: 700;
   color: ${({ theme }) => theme.colors.dark};
