@@ -1,12 +1,22 @@
-export const ForbesListItem = ({avatar, name}) => {
+import { ForbesItem, Avatar, Name, Capital } from './ForbesListItem.styled'
+import { BiDollarCircle } from 'react-icons/bi';
+import { FcBullish, FcBearish } from 'react-icons/fc';
+import { theme } from '../../styles/theme'
+
+export const ForbesListItem = ({ avatar, name, capital, isIncrease}) => {
     return (
-        <li>
-             <img
+        <ForbesItem>
+             <Avatar
                 src={avatar}
                 alt={name}
             />
-            <h3>{name}</h3>
-        </li>
+            <Name>{name}</Name>
+            <Capital >
+                {capital}
+                <BiDollarCircle color={theme.colors.accent} size={22} />
+                {isIncrease ?  <FcBullish/> : <FcBearish/>}
+            </Capital>
+        </ForbesItem>
     )
 
 }
