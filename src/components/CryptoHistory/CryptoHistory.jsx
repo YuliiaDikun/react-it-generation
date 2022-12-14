@@ -1,27 +1,29 @@
 import { formatHistoryDate } from '../../service/formatDate';
+import { BaseTable, THead, Th, Tr, Td } from './CryptoHistory.styled';
+
 export const CryptoHistory = ({ transactionHistory }) => {
   return (
-    <table>
-      <thead>
+    <BaseTable>
+      <THead>
         <tr>
-          <th>№</th>
-          <th>PRICE</th>
-          <th>AMOUNT</th>
-          <th>DATE</th>
+          <Th>№</Th>
+          <Th>PRICE</Th>
+          <Th>AMOUNT</Th>
+          <Th>DATE</Th>
         </tr>
-      </thead>
+      </THead>
       <tbody>
         {transactionHistory.map(({ id, price, amount, date }, index) => {
           return (
-            <tr key={id}>
-              <td>{index + 1}</td>
-              <td>{price}</td>
-              <td>{amount}</td>
-              <td>{formatHistoryDate(date)}</td>
-            </tr>
+            <Tr key={id}>
+              <Td>{index + 1}</Td>
+              <Td>{price}</Td>
+              <Td>{amount}</Td>
+              <Td>{formatHistoryDate(date)}</Td>
+            </Tr>
           );
         })}
       </tbody>
-    </table>
+    </BaseTable>
   );
 };
