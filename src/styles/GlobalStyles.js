@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyleComponent = createGlobalStyle`
-  
+
   img {
     display: block;
     max-width: 100%;
