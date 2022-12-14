@@ -1,7 +1,10 @@
 import data from '../data/article';
 import stats from '../data/data';
+import forbes from '../data/forbes'
 import { Statistics } from './Statistics/Statistics';
 import { BlogCard } from './BlogCard/BlogCard';
+import { ForbesList } from './ForbesList/ForbesList';
+
 export const App = () => {
   return (
     <div
@@ -16,6 +19,7 @@ export const App = () => {
     >
       {/* <BlogCard data={data} /> */}
       <Statistics title="main statistics" stats={stats} />
+      <ForbesList list={forbes}/>
     </div>
   );
 };
