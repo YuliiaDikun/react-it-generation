@@ -11,6 +11,7 @@ import { ForbesList } from './ForbesList/ForbesList';
 import { CryptoHistory } from './CryptoHistory/CryptoHistory';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyleComponent } from 'styles/GlobalStyles';
+import { GlobalFontComponent } from 'fonts/FontStyled';
 import { theme } from 'styles/theme';
 
 export const App = () => {
@@ -35,6 +36,7 @@ export const App = () => {
           </Heading>
           <CryptoHistory transactionHistory={transactions} />
           <GlobalStyleComponent />
+          <GlobalFontComponent />
         </Container>
       </Section>
     </ThemeProvider>
