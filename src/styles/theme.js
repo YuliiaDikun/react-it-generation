@@ -22,4 +22,11 @@ export const theme = Object.freeze({
   animation: {
     cubicBezier: '0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98)',
   },
+
+  media: {
+    mobile: '@media screen and (min-width: 480px)',
+    tablet: ' @media screen and (min-width: 768px)',
+    desktop: '@media screen and (min-width: 1200px)',
+  },
+
 });
