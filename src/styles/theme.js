@@ -1,3 +1,10 @@
+export const device = {
+    mobile: '(max-width: 767.5px)',
+    tablet: '(min-width: 768px) and (max-width: 1199.5px)',
+    desktop: '(min-width: 1200px)',
+    mobileOnly: '(max-width: 479.5px)'
+  }
+
 export const theme = Object.freeze({
   colors: {
     accent: '#2196F3',
@@ -23,10 +30,12 @@ export const theme = Object.freeze({
     cubicBezier: '0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98)',
   },
 
+  
   media: {
-    mobile: '@media screen and (min-width: 480px)',
-    tablet: ' @media screen and (min-width: 768px)',
-    desktop: '@media screen and (min-width: 1200px)',
+    mobile: `@media screen and ${device.mobile}`,
+    tablet: `@media screen and ${device.tablet}`,
+    desktop: `@media screen and ${device.desktop}`,
+    mobileOnly: `@media screen and ${device.mobileOnly}`,
   },
-
+  
 });

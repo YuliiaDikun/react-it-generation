@@ -13,11 +13,19 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyleComponent } from 'styles/GlobalStyles';
 import { GlobalFontComponent } from 'fonts/FontStyled';
 import { theme } from 'styles/theme';
+import { MediaQ } from './MediaQ/MediaQ';
 
 export const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Section>
+      <MediaQ deviceName={'mobile'}>
+        <div style={{
+          width: 100,
+          height: 100,
+          background: 'black',
+        }}></div>
+        </MediaQ>
+        <Section>
         <Container>
           <Heading marginBottom="50px" textAlign="center">
             Task 1
