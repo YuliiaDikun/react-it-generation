@@ -39,6 +39,7 @@ export const Tag = styled.span`
 export const CardTitle = styled.h2`
   font-size: ${({theme}) => theme.spacing(6)};
   text-transform: capitalize;
+  font-family: 'Chilanka';
 
   margin-bottom: 0;
 `

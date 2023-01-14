@@ -12,8 +12,18 @@ import { CryptoHistory } from './CryptoHistory/CryptoHistory';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyleComponent } from 'styles/GlobalStyles';
 import { theme } from 'styles/theme';
+import { useEffect } from 'react';
+import WebFont from 'webfontloader';
 
 export const App = () => {
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Droid Sans', 'Chilanka']
+      }
+    });
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Section>
